@@ -1,0 +1,3 @@
+espace_enfant_homepage:
+    path:     /EspaceEnfant
+    defaults: { _controller: EspaceEnfantBundle:Default:index }

@@ -1,0 +1,16 @@
+covoiturage_index:
+    path:     /aff
+    defaults: { _controller: "TransportBundle:Covoiturage:Affiche" }
+    methods:  GET
+
+covoiturage_show:
+    path:     /{id}/show
+    defaults: { _controller: "TransportBundle:Covoiturage:show" }
+    methods:  GET
+
+
+
+covoiturage_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TransportBundle:Covoiturage:delete" }
+    methods:  DELETE

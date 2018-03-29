@@ -1,0 +1,63 @@
+{% extends'TransportBundle:Formulaire:Formulaire.html.twig' %}
+
+{% block formulaireBody %}
+    <h1>Covoiturage</h1>
+<div class="booking-form-w3layouts">
+    <div class="sub-heading-agileits">
+        <table>
+            <tbody>
+                <tr>
+                    <div class="form-control">
+                    <th>Id</th>
+                    <td>{{ covoiturage.id }}</td>
+                    </div>
+                </tr>
+                <tr>
+                    <th>Iduser</th>
+                    <td>{{ covoiturage.iduser }}</td>
+                </tr>
+                <tr>
+                    <th>Depart</th>
+                    <td>{{ covoiturage.depart }}</td>
+                </tr>
+                <tr>
+                    <th>Arriver</th>
+                    <td>{{ covoiturage.arriver }}</td>
+                </tr>
+                <tr>
+                    <th>Horraire</th>
+                    <td>{{ covoiturage.horraire }}</td>
+                </tr>
+                <tr>
+                    <th>Dateoffre</th>
+                    <td>{{ covoiturage.dateoffre }}</td>
+                </tr>
+                <tr>
+                    <th>Nbrplacedispo</th>
+                    <td>{{ covoiturage.nbrplacedispo }}</td>
+                </tr>
+            </tbody>
+
+
+    </table>
+    </div>
+    <ul>
+        <li>
+
+        </li>
+        <li>
+
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+                <a href="{{ path('covoiturage_index') }}">Back to the list</a>
+                <a href="{{ path('covoiturage_edit', { 'id': covoiturage.id }) }}">Edit</a>
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+
+    }
+</div>
+
+{% endblock %}

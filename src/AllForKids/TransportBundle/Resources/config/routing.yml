@@ -1,0 +1,26 @@
+transport_covoiturage:
+    resource: "@TransportBundle/Resources/config/routing/covoiturage.yml"
+    prefix:   /covoiturage
+transport_test:
+    path:     /test
+    defaults: { _controller: "TransportBundle:Covoiturage:test" }
+
+transport_homepage:
+    path:     /
+    defaults: { _controller: "TransportBundle:Default:index" }
+covoiturage_index:
+    path:     /aff
+    defaults: { _controller: "TransportBundle:Covoiturage:Affiche" }
+    methods:  GET
+covoiturage_new:
+    path:     /new
+    defaults: { _controller: "TransportBundle:Covoiturage:AddCovoituraage2" }
+    methods:  [GET, POST]
+covoiturage_show:
+    path:     /{id}/show
+    defaults: { _controller: "TransportBundle:Covoiturage:showCovoiturage" }
+    methods:  GET
+covoiturage_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TransportBundle:Covoiturage:Modifier" }
+    methods:  [GET, POST]

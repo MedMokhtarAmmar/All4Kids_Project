@@ -1,0 +1,28 @@
+astuce:
+    resource: "@AstuceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+services:
+    resource: "@ServicesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+espace_enfant:
+    resource: "@EspaceEnfantBundle/Resources/config/routing.yml"
+    prefix:   /
+
+transport:
+    resource: "@TransportBundle/Resources/config/routing.yml"
+    prefix:   /Covoiturage
+all_for_kids_etablissement:
+    resource: "@AllForKidsEtablissementBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_app_user:
+    resource: "@MyAppUserBundle/Resources/config/routing.yml"
+    prefix:   /User
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

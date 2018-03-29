@@ -1,0 +1,100 @@
+{% extends'TransportBundle:Formulaire:Formulaire.html.twig' %}
+{% block formulaireBody %}
+<html>
+<head></head>
+<body>
+<h1>Covoiturage edit</h1>
+    <div class="booking-form-w3layouts">
+        <h2 class="sub-heading-agileits">Covoiturage Details</h2>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text1">
+                    <select class="form-control"  >
+                        <option>{{ covoiturage.depart}}</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Ariana">Ariana</option>
+                        <option value="Borij Louzir">Borij Louzir</option>
+                        <option value="baab saadoun">baab saadoun</option>
+                        <option value="City Khathra">City Khathra</option>
+                        <option value="bebejdid">bebejdid</option>
+                    </select>
+                </div>
+
+
+                <div class="field-agileinfo-spc form-w3-agile-text2">
+                    <select class="form-control"  >
+                        <option>{{ covoiturage.arriver}}</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Ariana">Ariana</option>
+                        <option value="Borij Louzir">Borij Louzir</option>
+                        <option value="baab saadoun">baab saadoun</option>
+                        <option value="City Khathra">City Khathra</option>
+                        <option value="bebejdid">bebejdid</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-flex-w3ls-sectns">
+                    <div class="field-agileinfo-spc form-w3-agile-text1">
+                        <input id="datepicker" name="Date" type="text" placeholder="Date Depart" value="{{ covoiturage.dateoffre}}" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+                               required="">
+                    </div>
+                    <div class="field-agileinfo-spc form-w3-agile-text2">
+                        <input type="text" id="timepicker" name="Time" class="timepicker form-control" placeholder="Horaire Depart" value="{{ covoiturage.horraire}}">
+                    </div>
+
+            </div>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text11">
+                    <select class="form-control" name="Nbr">
+                        <option value="">{{ covoiturage.nbrplacedispo}}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text2">
+                    <input type="submit" value="Edit" />
+                </div>
+                <div class="field-agileinfo-spc form-w3-agile-text11">
+                    {{ form_start(delete_form) }}
+                    <input type="submit" value="Delete">
+                    {{ form_end(delete_form) }}
+                </div>
+            </div>
+        <div class="main-flex-w3ls-sectns">
+
+            <div class="field-agileinfo-spc form-w3-agile-text11">
+                <a href="{{ path('covoiturage_index') }}">Back to the list</a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+<!--//copyright-->
+
+<script type="text/javascript" src="{{asset('Formulaire/js/jquery-2.2.3.min.js')}}"></script>
+<!-- Time Js -->
+<script type="text/javascript" src="{{asset('Formulaire/js/wickedpicker.js')}}"></script>
+<script type="text/javascript">
+    $('.timepicker,.timepicker1').wickedpicker({
+        twentyFour: false
+    });
+</script>
+<!--// Time Js -->
+<!-- Calendar Js -->
+<script src="{{asset('Formulaire/js/jquery-ui.js')}}"></script>
+<script>
+    $(function () {
+        $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+    });
+</script>
+<!-- //Calendar Js -->
+
+</body>
+</html>
+{% endblock  %}
+
+

@@ -1,0 +1,7 @@
+all_for_kids_etablissement_homepage:
+    path:     /
+    defaults: { _controller: AllForKidsEtablissementBundle:Default:index }
+home:
+    path:     /home
+    defaults: { _controller: AllForKidsEtablissementBundle:Default:home }
+

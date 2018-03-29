@@ -1,0 +1,3 @@
+astuce_homepage:
+    path:     /
+    defaults: { _controller: AstuceBundle:Default:index }

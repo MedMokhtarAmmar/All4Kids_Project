@@ -1,0 +1,18 @@
+my_app_user_homepage:
+    path:     /
+    defaults: { _controller: MyAppUserBundle:Default:index }
+Home:
+    path:     /home
+    defaults: { _controller: MyAppUserBundle:Default:Home }
+inscription_User:
+    path:     /inscription
+    defaults: { _controller: MyAppUserBundle:Default:Inscritption }
+log_User:
+    path:     /Login
+    defaults: { _controller: MyAppUserBundle:Default:index }
+Admin:
+    path:     /admin
+    defaults: { _controller: MyAppUserBundle:Default:Admin }
+Enfant:
+    path:     /Enfant
+    defaults: { _controller: MyAppUserBundle:Default:Enfant }

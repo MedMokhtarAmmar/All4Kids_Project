@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ALL FOR KIDS</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Toddler Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <script type="text/javascript" src="{{ asset('templates/js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('templates/js/bootstrap.js') }}"></script>
+    <!-- stylesheet -->
+    <link href=" {{ asset('templates/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href=" {{ asset('templates/css/slider.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href=" {{ asset('templates/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ asset('templates/css/flexslider.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <!-- //stylesheet -->
+    <!-- online fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //online fonts -->
+    <!-- font-awesome-icons -->
+    <link href="{{ asset('templates/css/font-awesome.css') }} " type="text/css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+</head>
+<body>
+<div class="agileits_main">
+    <!-- header -->
+    <div class="container">
+        <div class="w3_agile_logo">
+            <h1><a href="index.html">ALL FOR KIDS</a></h1>
+        </div>
+        <div class="agileits_w3layouts_nav">
+            <div id="toggle_m_nav">
+                <div id="m_nav_menu" class="m_nav">
+                    <div class="m_nav_ham w3_agileits_ham" id="m_ham_1"></div>
+                    <div class="m_nav_ham" id="m_ham_2"></div>
+                    <div class="m_nav_ham" id="m_ham_3"></div>
+                </div>
+            </div>
+            <div id="m_nav_container" class="m_nav wthree_bg">
+                <nav class="menu menu--sebastian">
+                    <ul id="m_nav_list" class="m_nav menu__list">
+                        <li class="m_nav_item menu__item menu__item--current" id="m_nav_item_1"> <a href="home" class="menu__link"> Home </a></li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_2"> <a href="pageEnfant" class="menu__link"> Espace Enfant </a> </li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_3"> <a href="#" class="menu__link">Service</a> </li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_4"> <a href="#" class="menu__link">Etablissement  </a> </li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_5"> <a href="#" class="menu__link">Transport</a> </li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_6"> <a href="#" class="menu__link">  Astuce </a> </li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_7">
+                            {% if user is defined %}
+                                {% if user is not null %}
+
+                                {% else %}
+                                    <a href="{{ path('fos_user_registration_register') }}" class="menu__link"> S'inscrire</a>
+                                {% endif %}
+                            {% else %}
+                                <a href="{{ path('fos_user_registration_register') }}" class="menu__link" >S'inscrire</a>
+                            {% endif %}
+                        </li>
+                        <li class="m_nav_item menu__item" id="moble_nav_item_8">
+                            {% if user is defined %}
+                                {% if user is not null %}
+                                    <a href="{{ path('fos_user_security_logout') }}" class="menu__link">logout</a>
+                                {% else %}
+                                    <a href="{{ path('fos_user_security_login') }}" class="menu__link">Authentification</a>
+                                {% endif %}
+                            {% else %}
+                                <a href="{{ path('fos_user_security_login') }}" class="menu__link"> Authentification</a>
+                            {% endif %}
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--// header -->
+    <!-- banner -->
+    <div class="w3_banner">
+        <div class="container">
+            <div class="slider">
+                <div class="callbacks_container">
+                    <ul class="rslides callbacks callbacks1" id="slider4">
+                        <li>
+                            <div class="banner_text_w3layouts">
+                                <h3>Worlds partner in parenting</h3>
+                                <p>Nam tellus nec enim tempus</p>
+                                <div class="w3-button">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner_text_w3layouts">
+                                <h3>Get information on basic baby care</h3>
+                                <p>Nam tellus nec enim tempus</p>
+                                <div class="w3-button">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner_text_w3layouts">
+                                <h3>All For Kids parenting </h3>
+                                <p>Nam tellus nec enim tempus</p>
+                                <div class="w3-button">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <script src="{{ asset('templates/js/responsiveslides.min.js') }}"></script>
+                <script>
+                    // You can also use "$(window).load(function() {"
+                    $(function () {
+                        // Slideshow 4
+                        $("#slider4").responsiveSlides({
+                            auto: true,
+                            pager:true,
+                            nav:true,
+                            speed: 500,
+                            namespace: "callbacks",
+                            before: function () {
+                                $('.events').append("<li>before event fired.</li>");
+                            },
+                            after: function () {
+                                $('.events').append("<li>after event fired.</li>");
+                            }
+                        });
+
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+</div>
+<!-- flexSlider -->
+<script defer src="{{ asset('templates/js/jquery.flexslider.js') }}"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function(slider){
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+<!-- //flexSlider -->
+
+<!-- menu -->
+<script type="text/javascript" src="{{ asset('templates/js/main.js') }}"></script>
+<!-- //menu -->
+<!-- about -->
+<div class="about_agileits" id="about">
+    <div class="container">
+        <h3 class="about_w3l text-center">About us</h3>
+        <div class="about_w3layouts">
+            <div class="slider col-md-6 col-sm-10 col-xs-10">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="{{ asset('templates/images/a.jpg') }}" alt=" " class="img-responsive" />
+                        </li>
+                        <li>
+                            <img src="{{ asset('templates/images/c.jpg') }}" alt=" " class="img-responsive" />
+                        </li>
+                        <li>
+                            <img src="{{ asset('templates/images/d.jpg') }}" alt=" " class="img-responsive" />
+                        </li>
+                        <li>
+                            <img src="{{ asset('templates/images/e.jpg') }}" alt=" " class="img-responsive" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- about-slider -->
+            <div class="about_text_agileits  col-md-6 col-sm-2 col-xs-2">
+                <h2>Welcome to All For Kids</h2>
+                <h4>Let us help you weed through the overwhelming amount of baby info. </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer turpis libero, accumsan vitae urna vel, porttitor ultricies nulla.Ut hendrerit volutpat orci, id tincidunt est vestibulum ac.</p>
+                <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="clearfix"></div>
+            <!-- Tooltip -->
+            <div class="tooltip-content">
+                <div class="modal fade features-modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Toddler</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ asset('templates/images/btn_bg.jpg') }}" alt="image">
+                                <p>Fusce et congue nibh, ut ullamcorper magna. Donec ac massa tincidunt, fringilla sapien vel, tempus massa. Vestibulum felis leo, tincidunt sit amet tristique accumsan. In vitae dapibus metus. Donec nec massa non nulla mattis aliquam egestas et mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Tooltip -->
+
+        </div>
+    </div>
+</div>
+<!--// about -->
+<!-- services -->
+<div class="services_agile" id="services">
+    <div class="container">
+        <div class="services_head_w3_agile text-center"><h3>Services</h3></div>
+        <div class="services-top">
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a1.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                        <p>Nutritional concern</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a2.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="fa fa-medkit" aria-hidden="true"></span>
+                        <p>Health care routine</p>
+                    </div>
+                </div>
+                <p>consectetur adipiscing elit</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a3.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="fa fa-bed" aria-hidden="true"></span>
+                        <p>sleep solutions</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a4.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="fa fa-plane" aria-hidden="true"></span>
+                        <p>Travel safety</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a5.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="fa fa-bath" aria-hidden="true"></span>
+                        <p>Daily Care</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a6.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                        <p>Ways to bond with your baby</p>
+                    </div>
+                </div>
+                <p>consectetur adipiscing elit</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a7.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="fa fa-level-up" aria-hidden="true"></span>
+                        <p>Growth and Development</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-4 service_grid text-center">
+                <div class="serviceinfo_agile ih-item circle colored effect17">
+                    <div class="img"><img src="{{ asset('templates/images/a8.jpg') }}" class="img-responsive" alt="img"></div>
+                    <div class="info">
+                        <span class="fa fa-sun-o" aria-hidden="true"></span>
+                        <p>Seasonal care</p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <p>consectetur adipiscing elit.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- //services -->
+<!--  essentials -->
+<div class="essentials_wthree" id="essentials">
+    <div class="container">
+        <div class="essentials_main_w3_agile text-center"><h3>essentials</h3></div>
+        <div class="essentials_grid">
+            <div class="baby_essentials col-md-6 col-sm-6 col-xs-6">
+                <h4>Baby Gear</h4>
+                <div class="gear_grid_wthree">
+                    <div class="gear col-md-6 col-sm-3 col-xs-12"><a href="#"><img src="{{ asset('templates/images/1.jpg') }}" class="img-responsive" alt="img"/></a></div>
+                    <div class="gear_info col-md-6 col-sm-9  col-xs-12">
+                        <h5>baby carriers</h5>
+                        <h6>By Patrick H. Brandon</h6>
+                        <p>Aenean vestibulum vulputate purus, in bibendum orci lacinia sed. </p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="gear_grid_wthree">
+                    <div class="gear col-md-6 col-sm-3 col-xs-12"><a href="#"><img src="{{ asset('templates/images/2.jpg') }}" class="img-responsive" alt="img"/></a></div>
+                    <div class="gear_info col-md-6 col-sm-9 col-xs-12">
+                        <h5>strollers</h5>
+                        <h6>By Z.Thompson</h6>
+                        <p>Aenean vestibulum vulputate purus, in bibendum orci lacinia sed.</p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="toddler_essentials col-md-6 col-sm-6 col-xs-6">
+                <h4>All For Kids Gear</h4>
+                <div class="gear_grid_wthree">
+                    <div class="gear col-md-6 col-sm-3 col-xs-12"><a href="#"><img src="{{ asset('templates/images/3.jpg') }}" class="img-responsive" alt="img"/></a></div>
+                    <div class="gear_info col-md-6 col-sm-9 col-xs-12">
+                        <h5>Toys</h5>
+                        <h6>By Eddie A. Medina</h6>
+                        <p>Aenean vestibulum vulputate purus, in bibendum orci lacinia sed. </p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="gear_grid_wthree">
+                    <div class="gear col-md-6 col-sm-3 col-xs-12"><a href="#"><img src="{{ asset('templates/images/4.jpg') }}" class="img-responsive" alt="img"/></a></div>
+                    <div class="gear_info col-md-6 col-sm-9  col-xs-12">
+                        <h5>Bikes</h5>
+                        <h6>By Michael C. Pier</h6>
+                        <p>Aenean vestibulum vulputate purus, in bibendum orci lacinia sed.. </p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- // essentials -->
+<!-- blog -->
+<div class="blog_agileits" id="blog">
+    <div class="blog_head_wthree text-center">
+        <h3>Blog</h3>
+        <h4>Baby is a blessing</h4>
+    </div>
+</div>
+<div class="blog-grids-w3ls">
+    <div class="container">
+        <div class="blog-grid-main">
+            <div class="blog">
+                <div class="blog_grid_agile">
+                    <div class="blog-a col-md-2 col-sm-3 col-xs-12 text-center">
+                        <h4>DEC</h4>
+                        <h5>25</h5>
+                        <span>2016</span>
+                    </div>
+                    <div class="blog-bg  col-md-5 col-sm-3 col-xs-12"><a href="#" data-toggle="modal" data-target="#myModal"><img src="{{ asset('templates/images/c.jpg') }}" class="img-responsive" alt="img"/></a></div>
+                    <div class="blog-b col-md-5 col-sm-6 col-xs-12">
+                        <h4><a href="#">Baby drooling</a></h4>
+                        <p>Cras consequat iaculis lorem, id vehicula erat mattis quis.in ven e natis purus.id vehicula erat mattis quis.</p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="blog_grid_agile">
+                    <div class="blog-a col-md-2 col-sm-3 col-xs-12 text-center">
+                        <h4>JAN</h4>
+                        <h5>04</h5>
+                        <span>2017</span>
+                    </div>
+                    <div class="blog-bg  col-md-5 col-sm-3 col-xs-12"><a href="#"><img src="{{ asset('templates/images/e.jpg') }}" class="img-responsive" alt="img"/></a></div>
+                    <div class="blog-b col-md-5 col-sm-6 col-xs-12">
+                        <h4><a href="#">The New Stay-at-Home Mom</a></h4>
+                        <p>Cras consequat iaculis lorem, id vehicula erat mattis quis.in ven e natis purus.id vehicula erat mattis quis.</p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="blog_grid_agile">
+                    <div class="blog-a col-md-2 col-sm-3 col-xs-12 text-center">
+                        <h4>JAN</h4>
+                        <h5>20</h5>
+                        <span>2017</span>
+                    </div>
+                    <div class="blog-bg  col-md-5 col-sm-3 col-xs-12"><a href="#"><img src="{{ asset('templates/images/b3.jpg') }}" class="img-responsive" alt="img"></a>
+                    </div>
+                    <div class="blog-b col-md-5 col-sm-6 col-xs-12">
+                        <h4><a href="#">The Truth About Parenting</a></h4>
+                        <p>Cras consequat iaculis lorem, id vehicula erat mattis quis.in ven e natis purus.id vehicula erat mattis quis.</p>
+                        <button class="btn btn-primary text-center button_w3layouts" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //blog -->
+<!-- news letter -->
+<div class="newletter_w3ls">
+    <div class="container">
+        <h3>Track your baby's development</h3>
+        <div class="newsletter_mainw3l">
+            <div class="newletter_w3ls_left col-md-9 col-sm-8 col-xs-7">
+                <h6>Join now to track your baby’s development and receive free weekly newsletters, parenting advice via email each day.</h6>
+                <form action="#" method="post">
+                    <input type="email" class="form-control"  name="Email address" placeholder="Email address*" required="" />
+                    <input type="submit" class="form-control" value="Join now!" />
+                </form>
+            </div>
+            <div class="nl_image col-md-3 col-sm-4 col-xs-5"></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- //news letter -->
+<!-- contact -->
+<div class="contact_w3_agileits text-center" id="contact">
+    <div class="container">
+        <h3>contact</h3>
+        <div class="contact_main_w3 text-center">
+            <div class="col-md-4 col-sm-4 col-xs-4 contact_w3l address_agile">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Address:</span><p>RM 1102,Hickory Heights<br>Golden Valley,Sanfrancisco.</p>
+            </div>
+            <div class="col-md-4  col-sm-4 col-xs-4 contact_w3l phone_w3l">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>Mobile:</span><p class="mobile">123-456-789</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 contact_w3l mail_w3layouts">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span>Email:</span><a href="mailto:info@example.com">info@example.com</a><br>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="contact agileits text-center">
+            <h4>Get in touch</h4>
+            <form action="#" method="post">
+                <div class="form-group contact-form">
+                    <input type="text"  name="first name" placeholder="First name *" required="" />
+                    <input type="text" class="email "  name="Last name" placeholder="Last name *" required="" />
+                    <input type="email"   name="Email address" placeholder="Email address *" required="" />
+                    <input type="text" class="phone" name="Phone number" placeholder="Phone number *" required=""/>
+                    <textarea  placeholder="Your Message *" required=""></textarea>
+                    <div class="submit_w3l">
+                        <input type="submit" value="send" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //contact -->
+<!-- map -->
+<div class="map-grid">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783" class="map" style="border:0" allowfullscreen=""></iframe>
+</div>
+<!-- //map -->
+<!--footer -->
+<div class="footer_agileits_w3layouts">
+    <div class="container">
+        <div class="footer_w3 text-center">
+            <div class="footer_copyright">
+
+            </div>
+            <ul class="list-inline">
+                <li><a href="#" class="icon icon-md icon-bordered icon-white fa fa-instagram "></a></li>
+                <li><a href="#" class="icon icon-md icon-bordered icon-white fa fa-twitter "></a></li>
+                <li><a href="#" class="icon icon-md icon-bordered icon-white fa fa-facebook"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- //footer -->
+<!-- here starts scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{{ asset('templates/js/move-top.js') }}"></script>
+<script type="text/javascript" src="{{ asset('templates/js/easing.js') }} "></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
+<!-- /ends-smoth-scrolling -->
+<!-- //here ends scrolling icon -->
+
+
+</body>
+</html>
